@@ -88,6 +88,10 @@ The script requires a set of read-only permissions to function correctly. Create
     -   **AWS CLI Profile Name**: Press `Enter` to use the default profile/role, or type the name of a specific profile.
     -   **Region IDs**: Press `Enter` to scan all available MSK regions, or provide a comma-separated list (e.g., `us-east-1,eu-west-2`).
 
+7.  **Deactivate the Virtual Environment (When Finished)
+    ```bash
+    deactivate
+    ```
 ---
 
 ## 📊 Output
