@@ -1,15 +1,14 @@
-# 📊 kafka-metrics-extractor
+# 📊 kafka-metrics-fetcher
  
-`kafka-metrics-extractor` is a tool designed to pull raw usage from Kafka providers such as MSK, OSK and others (currently supports MSK clusters only).
 The script for extracting MSK usage, it uses MSK permissions to list and describe the clusters only and then 
-collects the usage data from CloudWatch and CostExplorer in order to avoid any cluster disruption. 
+collects the usage data from CloudWatch. 
  
 ## 🚀 Installation and Setup
  
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/confluentinc/kafka-metrics-extractor
-cd kafka-metrics-extractor
+git clone https://github.com/vamsikrishnags/msk-metrics-fetcher
+cd msk-metrics-fetcher
 ```
  
 ### 2️⃣ Set Up a Virtual Environment
@@ -22,17 +21,6 @@ source venv/bin/activate
 ### 3️⃣ Install Dependencies
 ```bash
 pip3 install -r requirements.txt
-```
- 
-### 4️⃣ Configure the Script
-Copy the example configuration file and update it as needed, for MSK:
-```bash
-cp config.msk.example config.cfg
-```
-
-for OSK (still not supported):
-```bash
-cp config.msk.example config.cfg
 ```
 
 ### 🔐 Credential Setup
@@ -54,7 +42,6 @@ To run the script successfully, your IAM user or role must have the following pe
 #### ✅ Required AWS Services:
 - Amazon MSK
 - Amazon CloudWatch
-- AWS Cost Explorer
 
 #### 🔐 Minimum IAM Policy Permissions:
 
@@ -93,7 +80,7 @@ To run the script successfully, your IAM user or role must have the following pe
 ### 5️⃣ Run the Script
 Execute the script with the configuration file:
 ```bash
-python3 pullStats.py config.cfg <output directory>
+python3 msk_inventory_fetcher_v06_2Jul25_2223.py 
 ```
  
 ### 6️⃣ Deactivate the Virtual Environment (When Finished)
@@ -101,7 +88,3 @@ python3 pullStats.py config.cfg <output directory>
 deactivate
 ```
  
-## 🔮 Future Plans
-- 🐳 Docker support (coming soon)
-- Open Source Kafka
-- EventHub
