@@ -22,10 +22,7 @@ This Python script scans an AWS account to generate a comprehensive CSV report o
     -   `boto3`: The AWS SDK for Python.
     -   `pandas`: For data manipulation and CSV export.
 
-    You can install them using the `requirements.txt` file:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   
 
 ---
 
@@ -60,18 +57,34 @@ The script requires a set of read-only permissions to function correctly. Create
 ## 🚀 How to Run
 
 1.  **Clone the repository or save the script** to your local machine.
-2.  **Install the dependencies**:
     ```bash
-    pip install boto3 pandas
+    git clone https://github.com/vamsikrishnags/msk-metrics-fetcher
+    cd msk-metrics-fetcher
     ```
-3.  **Ensure your AWS credentials are configured**. You can do this by:
+    
+2.  **Activte Vritual Environment**
+    make sure your have python version is >=3.8
+    ```bash
+    python3 -m venv venv
+    ```
+    ```bash
+    source venv/bin/activate
+    ```
+    
+3.  **Install the dependencies**:
+     You can install them using the `requirements.txt` file:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+4.  **Ensure your AWS credentials are configured**. You can do this by:
     -   Running `aws configure` to set up a default profile.
     -   Running the script on an EC2 instance or Lambda with an attached IAM role.
-4.  **Execute the script** from your terminal:
+5.  **Execute the script** from your terminal:
     ```bash
     python your_script_name.py
     ```
-5.  **Follow the interactive prompts**:
+6.  **Follow the interactive prompts**:
     -   **AWS CLI Profile Name**: Press `Enter` to use the default profile/role, or type the name of a specific profile.
     -   **Region IDs**: Press `Enter` to scan all available MSK regions, or provide a comma-separated list (e.g., `us-east-1,eu-west-2`).
 
