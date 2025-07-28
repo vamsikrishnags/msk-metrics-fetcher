@@ -84,7 +84,7 @@ The script requires a set of read-only permissions to function correctly. Create
     -   Running the script on an EC2 instance or Lambda with an attached IAM role.
 5.  **Execute the script** from your terminal:
     ```bash
-    python your_script_name.py
+    python3 msk_inventory_fetcher.py
     ```
 6.  **Follow the interactive prompts**:
     -   **AWS CLI Profile Name**: Press `Enter` to use the default profile/role, or type the name of a specific profile.
