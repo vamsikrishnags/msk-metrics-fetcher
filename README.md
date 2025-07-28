@@ -59,6 +59,8 @@ The script requires a set of read-only permissions to function correctly. Create
 1.  **Clone the repository or save the script** to your local machine.
     ```bash
     git clone https://github.com/vamsikrishnags/msk-metrics-fetcher
+    ```
+    ```bash
     cd msk-metrics-fetcher
     ```
     
